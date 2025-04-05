@@ -1,7 +1,7 @@
 ---@class java.Config
 ---@field root_markers string[]
 ---@field jdtls { version: string }
----@field lombok { version: string }
+---@field lombok { enable: boolean, version: string }
 ---@field java_test { enable: boolean, version: string }
 ---@field java_debug_adapter { enable: boolean, version: string }
 ---@field spring_boot_tools { enable: boolean, version: string }
@@ -28,6 +28,7 @@ local config = {
 	},
 
 	lombok = {
+		enable = true,
 		version = 'nightly',
 	},
 

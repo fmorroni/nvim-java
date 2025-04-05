@@ -60,7 +60,6 @@ end
 function M.get_pkg_list(config)
 	local deps = List:new({
 		{ name = 'jdtls', version = config.jdtls.version },
-		{ name = 'lombok-nightly', version = config.lombok.version },
 		{ name = 'java-test', version = config.java_test.version },
 		{
 			name = 'java-debug-adapter',
@@ -76,6 +75,13 @@ function M.get_pkg_list(config)
 		deps:push({
 			name = 'spring-boot-tools',
 			version = config.spring_boot_tools.version,
+		})
+	end
+
+	if config.lombok.enable then
+		deps:push({
+			name = 'lombok-nightly',
+			version = config.lombok.version
 		})
 	end
 

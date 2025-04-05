@@ -360,6 +360,7 @@ want, following options are available
   },
 
   lombok = {
+    enable = true,
     version = 'nightly',
   },
 
